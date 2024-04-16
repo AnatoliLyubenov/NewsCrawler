@@ -1,12 +1,9 @@
 package com.example.NewsCrawler.controllers;
 
 import com.example.NewsCrawler.constants.Role;
+import com.example.NewsCrawler.entities.User;
 import com.example.NewsCrawler.repositories.UserRepository;
-import com.web.crawler.WebCrawler.constants.Role;
-import com.web.crawler.WebCrawler.entities.User;
-import com.web.crawler.WebCrawler.repositories.UserRepository;
 import jakarta.validation.Valid;
-import org.apache.catalina.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Controller;
@@ -31,7 +28,7 @@ public class UserController {
     @PostMapping("/login")
     public String login(@RequestParam("username") String username, @RequestParam("password") String password, Model model) {
         User user = userRepository.findByUsername(username);
-        if (user == null || passwordEncoder.matches(password, ((User) user).getPassword())) {
+        if (user == null || passwordEncoder.matches(password, (user).getPassword())) {
             model.addAttribute("error", "User not found.");
             return "login";
         }
