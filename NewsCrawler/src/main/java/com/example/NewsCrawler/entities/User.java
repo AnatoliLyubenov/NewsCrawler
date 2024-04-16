@@ -1,10 +1,9 @@
 package com.example.NewsCrawler.entities;
 
+import com.example.NewsCrawler.constants.Role;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotEmpty;
 import org.springframework.validation.annotation.Validated;
-
-import javax.management.relation.Role;
 
 @Validated
 @Entity
@@ -23,17 +22,10 @@ public class User {
     public User() {
     }
 
-    public User(String username, String password, Role role) {
+    public User(Long id, String username, String password, Role role) {
+        this.id = id;
         this.username = username;
         this.password = password;
-        this.role = role;
-    }
-
-    public Role getRole() {
-        return role;
-    }
-
-    public void setRole(Role role) {
         this.role = role;
     }
 
@@ -59,6 +51,14 @@ public class User {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public Role getRole() {
+        return role;
+    }
+
+    public void setRole(Role role) {
+        this.role = role;
     }
 }
 
