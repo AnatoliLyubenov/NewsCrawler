@@ -47,7 +47,8 @@ public class UserController {
             return "register";
         }
         user.setRole(Role.USER);
-        user.setPassword(passwordEncoder.encode(user.getPassword()));
+        user.setPassword(
+                passwordEncoder.encode(user.getPassword()));
 
         // След регистрация всеки user е с роля USER
         userRepository.save(user);
