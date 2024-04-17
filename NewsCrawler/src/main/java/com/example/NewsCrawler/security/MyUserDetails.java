@@ -1,6 +1,6 @@
 package com.example.NewsCrawler.security;
 
-import org.apache.catalina.User;
+import com.example.NewsCrawler.entities.User;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -8,14 +8,14 @@ import org.springframework.security.core.userdetails.UserDetails;
 import java.util.Arrays;
 import java.util.Collection;
 
-public class myUserDetails implements UserDetails {
+public class MyUserDetails implements UserDetails {
     private User user;
-    myUserDetails(User user){
+    MyUserDetails(User user){
         this.user = user;
     }
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        SimpleGrantedAuthority authority = new SimpleGrantedAuthority(user.getRoles().toString());
+        SimpleGrantedAuthority authority = new SimpleGrantedAuthority(user.getRole().toString());
         return Arrays.asList(authority);
     }
 
