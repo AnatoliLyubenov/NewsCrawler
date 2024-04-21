@@ -1,4 +1,9 @@
-package com.example.NewsCrawler.crawler;
+package com.example.NewsCrawler.crawler.DnekvikBg;
+
+import com.web.crawler.WebCrawler.entities.NewsFilter;
+import com.web.crawler.WebCrawler.repositories.NewsRepository;
+import edu.uci.ics.crawler4j.crawler.CrawlController;
+import edu.uci.ics.crawler4j.crawler.WebCrawler;
 
 
 public class DnevnikBgFactory implements CrawlController.WebCrawlerFactory<WebCrawler> {
