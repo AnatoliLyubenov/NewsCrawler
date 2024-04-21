@@ -1,8 +1,17 @@
-package com.example.NewsCrawler.crawler;
+package com.example.NewsCrawler.crawler.DnekvikBg;
 
+import com.web.crawler.WebCrawler.entities.NewsFilter;
+import com.web.crawler.WebCrawler.repositories.NewsFilterRepository;
+import com.web.crawler.WebCrawler.repositories.NewsRepository;
+import edu.uci.ics.crawler4j.crawler.CrawlConfig;
+import edu.uci.ics.crawler4j.crawler.CrawlController;
+import edu.uci.ics.crawler4j.fetcher.PageFetcher;
+import edu.uci.ics.crawler4j.robotstxt.RobotstxtConfig;
+import edu.uci.ics.crawler4j.robotstxt.RobotstxtServer;
 import org.springframework.stereotype.Service;
 
 import java.io.File;
+import java.util.List;
 
 @Service
 public class DnevnikBgCrawlerService {

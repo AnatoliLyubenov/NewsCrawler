@@ -1,9 +1,16 @@
-package com.example.NewsCrawler.crawler;
+package com.example.NewsCrawler.crawler.DnekvikBg;
 
-import org.hibernate.query.Page;
+import com.web.crawler.WebCrawler.entities.News;
+import com.web.crawler.WebCrawler.entities.NewsFilter;
+import com.web.crawler.WebCrawler.repositories.NewsRepository;
+import edu.uci.ics.crawler4j.crawler.Page;
+import edu.uci.ics.crawler4j.crawler.WebCrawler;
+import edu.uci.ics.crawler4j.parser.HtmlParseData;
+import edu.uci.ics.crawler4j.url.WebURL;
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Element;
 
-import javax.swing.text.Document;
-import javax.swing.text.Element;
 import java.net.URISyntaxException;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
