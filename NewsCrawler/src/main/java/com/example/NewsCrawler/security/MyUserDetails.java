@@ -1,6 +1,6 @@
 package com.example.NewsCrawler.security;
 
-import com.example.NewsCrawler.entities.User;
+import com.web.crawler.WebCrawler.entities.User;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;

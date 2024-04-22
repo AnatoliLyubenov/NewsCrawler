@@ -21,8 +21,8 @@ public class NewsController {
 
     @GetMapping
     public String getAllNews(Model model) {
-      //  List<News> news = newsRepository.findAll();
-        //model.addAttribute("allNews", news);
+       List<News> news = newsRepository.findAll();
+        model.addAttribute("allNews", news);
         return "news/list";
     }
 }

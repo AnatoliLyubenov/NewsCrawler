@@ -1,7 +1,7 @@
 package com.example.NewsCrawler.crawler;
 
-import com.web.crawler.WebCrawler.crawler.DnekvikBg.DnevnikBgCrawlerService;
-import com.web.crawler.WebCrawler.crawler.VestiBg.VestiBgCrawlerService;
+import com.example.NewsCrawler.crawler.DnekvikBg.DnevnikBgCrawlerService;
+import com.example.NewsCrawler.crawler.VestiBg.VestiBgCrawlerService;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.scheduling.annotation.Scheduled;

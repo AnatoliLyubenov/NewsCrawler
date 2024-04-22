@@ -1,7 +1,7 @@
 package com.example.NewsCrawler.crawler.VestiBg;
 
-import com.web.crawler.WebCrawler.entities.NewsFilter;
-import com.web.crawler.WebCrawler.repositories.NewsRepository;
+import com.example.NewsCrawler.entities.NewsFilter;
+import com.example.NewsCrawler.repositories.NewsRepository;
 import edu.uci.ics.crawler4j.crawler.CrawlController;
 import edu.uci.ics.crawler4j.crawler.WebCrawler;
 

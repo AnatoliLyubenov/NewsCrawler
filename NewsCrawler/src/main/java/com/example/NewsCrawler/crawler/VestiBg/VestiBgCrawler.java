@@ -1,9 +1,9 @@
 package com.example.NewsCrawler.crawler.VestiBg;
 
-import com.web.crawler.WebCrawler.constants.Month;
-import com.web.crawler.WebCrawler.entities.News;
-import com.web.crawler.WebCrawler.entities.NewsFilter;
-import com.web.crawler.WebCrawler.repositories.NewsRepository;
+import com.example.NewsCrawler.constants.Month;
+import com.example.NewsCrawler.entities.News;
+import com.example.NewsCrawler.entities.NewsFilter;
+import com.example.NewsCrawler.repositories.NewsRepository;
 import edu.uci.ics.crawler4j.crawler.Page;
 import edu.uci.ics.crawler4j.crawler.WebCrawler;
 import edu.uci.ics.crawler4j.parser.HtmlParseData;
