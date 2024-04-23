@@ -46,8 +46,7 @@ public class DnevnikBgCrawlerService {
         config.setMaxDepthOfCrawling(maxDepthOfCrawling);
 
         CrawlController controller = getCrawlController(baseUrl, config);
-        controller.start(
-                new DnevnikBgFactory(newsFilter, newsRepository), numCrawlers);
+        controller.start(new DnevnikBgFactory(newsFilter, newsRepository), numCrawlers);
     }
 
     public void crawl() throws Exception {
