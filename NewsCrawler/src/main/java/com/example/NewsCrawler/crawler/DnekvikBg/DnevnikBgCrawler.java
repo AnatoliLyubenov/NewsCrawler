@@ -1,12 +1,14 @@
 package com.example.NewsCrawler.crawler.DnekvikBg;
 
-import com.web.crawler.WebCrawler.entities.News;
-import com.web.crawler.WebCrawler.entities.NewsFilter;
-import com.web.crawler.WebCrawler.repositories.NewsRepository;
-import edu.uci.ics.crawler4j.crawler.Page;
+
+
+import com.example.NewsCrawler.entities.News;
+import com.example.NewsCrawler.entities.NewsFilter;
+import com.example.NewsCrawler.repositories.NewsRepository;
 import edu.uci.ics.crawler4j.crawler.WebCrawler;
 import edu.uci.ics.crawler4j.parser.HtmlParseData;
 import edu.uci.ics.crawler4j.url.WebURL;
+import edu.uci.ics.crawler4j.crawler.Page;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
