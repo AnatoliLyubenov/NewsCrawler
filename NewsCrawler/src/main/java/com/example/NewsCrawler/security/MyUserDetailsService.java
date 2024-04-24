@@ -1,7 +1,7 @@
 package com.example.NewsCrawler.security;
 
-import com.web.crawler.WebCrawler.entities.User;
-import com.web.crawler.WebCrawler.repositories.UserRepository;
+import com.example.NewsCrawler.entities.User;
+import com.example.NewsCrawler.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;

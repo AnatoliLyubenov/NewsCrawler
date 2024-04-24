@@ -9,12 +9,30 @@
 <body>
 
 <!--FRAGMENT -->
-<th:block th:insert="~{fragments/navbar}"></th:block>
+<div class="w3-top" xmlns:th="http://www.w3.org/1999/xhtml">
+    <div class="w3-bar w3-grey w3-wide w3-padding w3-card">
+        <a href="/home" class="w3-bar-item w3-button"><b>NEWS</b> CRAWLER</a>
+        <a href="/news" class="w3-bar-item w3-button">Нашите новини</a>
+        <!-- Float links to the right. Hide them on small screens -->
+        <div th:if="${not #authorization.expression('isAuthenticated()')}">
+            <a href="/login" class="w3-bar-item w3-button">Впиши се</a>
+            <a href="/register" class="w3-bar-item w3-button">Регистрирай се</a>
+        </div>
+        <div th:if="${#authorization.expression('isAuthenticated()')}">
+            <a href="/keywords" class="w3-bar-item w3-button">Моите ключови думи</a>
+            <a href="/keywords/occurrences" class="w3-bar-item w3-button">Статистика</a>
+            <!-- Add the logout link here -->
+            <form th:action="@{/logout}" method="post">
+                <input  class="w3-bar-item w3-button" type="submit" value="Излез"/>
+            </form>
+        </div>
+    </div>
+</div>
 
 <!-- Header -->
 <header class="w3-display-container w3-content w3-wide" style="max-width:1500px;" id="home">
     <center>
-    <img class="w3-image" src="https://ichef.bbci.co.uk/images/ic/768x432/p060dh18.jpg" alt="Architecture" width="1300" style="padding: 60px;">
+        <img class="w3-image" src="https://ichef.bbci.co.uk/images/ic/768x432/p060dh18.jpg" alt="Architecture" width="1300" style="padding: 60px;">
     </center>
     <div class="w3-display-middle w3-margin-top w3-center">
         <h1 class="w3-xxlarge w3-text-white"><span class="w3-padding w3-black w3-opacity-min"><b>NEWS CRAWLER</b></span></h1>
@@ -67,5 +85,6 @@
             Не пропускайте нито една важна информация - включете се в нашата новинарска революция сега!
         </p>
     </div>
+</div>
 </body>
 </html>

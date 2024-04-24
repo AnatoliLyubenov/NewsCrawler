@@ -76,7 +76,7 @@ public class DnevnikBgCrawler extends WebCrawler {
         newsRepository.save(news);
     }
 
-    private String extractCategoryName(String url) throws URISyntaxException {
+    public String extractCategoryName(String url) throws URISyntaxException {
         if (url.startsWith(SITE)) {
             // Get the substring after "https://www.dnevnik.bg/"
             String remainingURL = url.substring(SITE.length());
@@ -93,7 +93,7 @@ public class DnevnikBgCrawler extends WebCrawler {
         return null;
     }
 
-    private String extractHeading(String html) {
+    public String extractHeading(String html) {
         Document document = Jsoup.parse(html);
         Element headingElement = document.selectFirst("h1[itemprop=\"name headline\"]");
 

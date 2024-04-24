@@ -1,6 +1,6 @@
 package com.example.NewsCrawler.repositories;
 
-import com.web.crawler.WebCrawler.entities.KeywordOccurrence;
+import com.example.NewsCrawler.entities.KeywordOccurrence;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

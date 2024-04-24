@@ -14,6 +14,9 @@ public class Keyword {
     @JoinColumn(name = "user_id")
     private User userId;
 
+    @Column(name = "is_deleted", nullable = false)
+    private boolean deleted;
+
     public Keyword() {
     }
 
@@ -46,4 +49,13 @@ public class Keyword {
     public void setUserId(User userId) {
         this.userId = userId;
     }
+
+    public boolean isDeleted() {
+        return deleted;
+    }
+
+    public void setDeleted(boolean deleted) {
+        this.deleted = deleted;
+    }
 }
+

@@ -1,6 +1,8 @@
 package com.example.NewsCrawler.controllers;
 
 import com.example.NewsCrawler.entities.Keyword;
+import com.example.NewsCrawler.entities.KeywordOccurrence;
+import com.example.NewsCrawler.service.KeywordOccurrenceService;
 import com.example.NewsCrawler.service.KeywordService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -13,9 +15,11 @@ import java.util.List;
 public class KeywordController {
 
     private final KeywordService keywordService;
+    private final KeywordOccurrenceService keywordOccurrenceService;
 
-    public KeywordController(KeywordService keywordService) {
+    public KeywordController(KeywordService keywordService, KeywordOccurrenceService keywordOccurrenceService) {
         this.keywordService = keywordService;
+        this.keywordOccurrenceService = keywordOccurrenceService;
     }
 
     @GetMapping
@@ -23,6 +27,13 @@ public class KeywordController {
         List<Keyword> keywords = keywordService.getAllKeywordsForUser();
         model.addAttribute("keywords", keywords);
         return "keyword/list";
+    }
+
+    @GetMapping("/occurrences")
+    public String getAllKeywordOccurrences(Model model) {
+        List<KeywordOccurrence> keywordOccurrences = keywordOccurrenceService.allKeywordOccurrencesBuLoggedUser();
+        model.addAttribute("keywordOccurrences", keywordOccurrences);
+        return "keywordOccurrences/list";
     }
 
     @GetMapping("/{id}")

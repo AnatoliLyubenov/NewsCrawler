@@ -71,7 +71,7 @@ public class VestiBgCrawler extends WebCrawler {
         return createdDateLocalDate.isEqual(today);
     }
 
-    private static String extractArticleTime(String htmlContent) {
+    public static String extractArticleTime(String htmlContent) {
         Document document = Jsoup.parse(htmlContent);
 
         Element articleTimeElement = document.selectFirst("div.article-info > div.article-time");
@@ -110,7 +110,7 @@ public class VestiBgCrawler extends WebCrawler {
         newsRepository.save(news);
     }
 
-    private String extractCategoryName(String url) throws URISyntaxException {
+    public static String extractCategoryName(String url) throws URISyntaxException {
         if (url.startsWith(SITE)) {
             // Get the substring after "https://www.vesti.bg/"
             String remainingURL = url.substring(SITE.length());

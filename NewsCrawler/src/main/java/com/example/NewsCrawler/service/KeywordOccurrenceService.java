@@ -1,6 +1,7 @@
 package com.example.NewsCrawler.service;
 
-import com.web.crawler.WebCrawler.entities.KeywordOccurrence;
+
+import com.example.NewsCrawler.entities.KeywordOccurrence;
 
 import java.util.List;
 
