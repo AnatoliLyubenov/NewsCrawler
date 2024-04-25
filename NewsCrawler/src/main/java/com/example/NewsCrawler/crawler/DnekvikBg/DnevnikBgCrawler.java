@@ -41,6 +41,7 @@ public class DnevnikBgCrawler extends WebCrawler {
 
         boolean areTheNewsFromToday = areTheNewsFromToday(urlString, pattern);
 
+        System.out.println("SHOULD VISIT  " + urlString);
         return urlString.matches(".*/\\d{4}/\\d{2}/\\d{2}/\\d+_.*") && !FILTERS.matcher(urlString).matches()
                 && areTheNewsFromToday && urlString.startsWith(SITE);
     }
